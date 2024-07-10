@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../styles/Dashboard.css';
 
 const Dashboard = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -9,6 +10,10 @@ const Dashboard = () => {
         types: {},
         generations: {}
     });
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 25;
+
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/pokemon')
@@ -31,30 +36,47 @@ const Dashboard = () => {
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
-                // Handle error gracefull
             });
     }, []);
 
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    const paginatedPokemonList = pokemonList.slice(startIndex, endIndex);
+
     return (
         <div>
-            <h1>Pokemon Dashboard</h1>
-            <div>
-                <h2>Summary</h2>
-                <p>Total Pokemon: {summary.total}</p>
-                <p>Types:</p>
-                <ul>
-                    {Object.entries(summary.types).map(([type, count]) => (
-                        <li key={type}>{type}: {count}</li>
-                    ))}
-                </ul>
-                <p>Generations:</p>
-                <ul>
-                    {Object.entries(summary.generations).map(([generation, count]) => (
-                        <li key={generation}>{generation}: {count}</li>
-                    ))}
-                </ul>
+            <div className='summary'>
+                <h2>Meet Our Pokemon!</h2>
+
+                <div className='col'>
+                    <p>Total Pokemon: {summary.total}</p>
+                </div>
+
+                    <div className='row'>
+                        <div>
+                            <p>Types:</p>
+                            <ul>
+                                {Object.entries(summary.types).map(([type, count]) => (
+                                    <li key={type}>{type}: {count}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Generations:</p>
+                            <ul>
+                                {Object.entries(summary.generations).map(([generation, count]) => (
+                                    <li key={generation}>{generation}: {count}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
             </div>
-            <div>
+            <div className='table'>
                 <h2>Pokemon List</h2>
                 <table>
                     <thead>
@@ -70,7 +92,7 @@ const Dashboard = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {pokemonList.map(pokemon => (
+                        {paginatedPokemonList.map(pokemon => (
                             <tr key={pokemon.number}>
                                 <td>{pokemon.number}</td>
                                 <td><Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link></td>
@@ -84,6 +106,11 @@ const Dashboard = () => {
                         ))}
                     </tbody>
                 </table>
+                <div className="pagination">
+                    <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
+                    Page {currentPage} of {Math.ceil(summary.total / itemsPerPage)}
+                    <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === Math.ceil(summary.total / itemsPerPage)}>Next</button>
+                </div>
             </div>
         </div>
     );
