@@ -8,7 +8,7 @@ namespace PokemonAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [EnableCors("AllowReactApp")]
+    [EnableCors()]
     public class PokemonController : ControllerBase
     {
         private readonly PokemonService _pokemonService;

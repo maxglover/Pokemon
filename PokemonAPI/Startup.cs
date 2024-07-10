@@ -9,11 +9,12 @@ public class Startup
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
+    
     if (env.IsDevelopment())
     {
         app.UseDeveloperExceptionPage(); // Use developer exception page only in development
     }
-
+    
     app.UseRouting();
 
     app.UseCors(options =>

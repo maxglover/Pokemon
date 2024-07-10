@@ -11,7 +11,7 @@ namespace PokemonAPI.Services
 
         public PokemonService()
         {
-            var jsonData = System.IO.File.ReadAllText("pokemon.json");
+            var jsonData = System.IO.File.ReadAllText("../pokemon.json");
             _pokemonList = JsonConvert.DeserializeObject<List<Pokemon>>(jsonData);
         }
 
