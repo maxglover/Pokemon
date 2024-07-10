@@ -12,7 +12,7 @@ h2{
     font-family: fantasy;
 }
 
-p{
+.summary p{
     font-size: 28px;
     font-family: fantasy;
 }
@@ -38,8 +38,14 @@ p{
 
 .table{
     width: 100%;
+    background-color: bisque;
 }
 
 table{
     width: 100%;
+}
+
+.summary > *, .table > * {
+    margin: 0;
+    padding: 0; 
 }

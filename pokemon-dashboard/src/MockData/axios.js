@@ -1,0 +1,840 @@
+
+module.exports = jest.fn(() =>
+    Promise.resolve({
+      data: [
+        {
+            "number": 1,
+            "name": "Bulbasaur",
+            "generation": "Generation I",
+            "height": 7,
+            "weight": 69,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "stats": [
+              {
+                "name": "hp",
+                "value": 45
+              },
+              {
+                "name": "attack",
+                "value": 49
+              },
+              {
+                "name": "defense",
+                "value": 49
+              },
+              {
+                "name": "special-attack",
+                "value": 65
+              },
+              {
+                "name": "special-defense",
+                "value": 65
+              },
+              {
+                "name": "speed",
+                "value": 45
+              }
+            ],
+            "moves": [
+              "razor-wind",
+              "swords-dance",
+              "cut",
+              "bind",
+              "vine-whip",
+              "headbutt",
+              "tackle",
+              "body-slam",
+              "take-down",
+              "double-edge",
+              "growl",
+              "strength",
+              "mega-drain",
+              "leech-seed",
+              "growth",
+              "razor-leaf",
+              "solar-beam",
+              "poison-powder",
+              "sleep-powder",
+              "petal-dance",
+              "string-shot",
+              "toxic",
+              "rage",
+              "mimic",
+              "double-team",
+              "defense-curl",
+              "light-screen",
+              "reflect",
+              "bide",
+              "sludge",
+              "skull-bash",
+              "amnesia",
+              "flash",
+              "rest",
+              "substitute",
+              "snore",
+              "curse",
+              "protect",
+              "sludge-bomb",
+              "mud-slap",
+              "outrage",
+              "giga-drain",
+              "endure",
+              "charm",
+              "false-swipe",
+              "swagger",
+              "fury-cutter",
+              "attract",
+              "sleep-talk",
+              "return",
+              "frustration",
+              "safeguard",
+              "sweet-scent",
+              "synthesis",
+              "hidden-power",
+              "sunny-day",
+              "rock-smash",
+              "facade",
+              "nature-power",
+              "helping-hand",
+              "ingrain",
+              "knock-off",
+              "secret-power",
+              "weather-ball",
+              "grass-whistle",
+              "bullet-seed",
+              "magical-leaf",
+              "natural-gift",
+              "worry-seed",
+              "seed-bomb",
+              "energy-ball",
+              "leaf-storm",
+              "power-whip",
+              "captivate",
+              "grass-knot",
+              "venoshock",
+              "acid-spray",
+              "round",
+              "echoed-voice",
+              "grass-pledge",
+              "work-up",
+              "grassy-terrain",
+              "confide",
+              "grassy-glide",
+              "tera-blast",
+              "trailblaze"
+            ],
+            "abilities": [
+              "overgrow",
+              "chlorophyll"
+            ],
+            "evolution": {
+              "from": null,
+              "to": [
+                "ivysaur"
+              ]
+            },
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          },
+          {
+            "number": 2,
+            "name": "Ivysaur",
+            "generation": "Generation I",
+            "height": 10,
+            "weight": 130,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "stats": [
+              {
+                "name": "hp",
+                "value": 60
+              },
+              {
+                "name": "attack",
+                "value": 62
+              },
+              {
+                "name": "defense",
+                "value": 63
+              },
+              {
+                "name": "special-attack",
+                "value": 80
+              },
+              {
+                "name": "special-defense",
+                "value": 80
+              },
+              {
+                "name": "speed",
+                "value": 60
+              }
+            ],
+            "moves": [
+              "swords-dance",
+              "cut",
+              "bind",
+              "vine-whip",
+              "headbutt",
+              "tackle",
+              "body-slam",
+              "take-down",
+              "double-edge",
+              "growl",
+              "roar",
+              "strength",
+              "mega-drain",
+              "leech-seed",
+              "growth",
+              "razor-leaf",
+              "solar-beam",
+              "poison-powder",
+              "sleep-powder",
+              "petal-dance",
+              "string-shot",
+              "toxic",
+              "rage",
+              "mimic",
+              "double-team",
+              "defense-curl",
+              "light-screen",
+              "reflect",
+              "bide",
+              "amnesia",
+              "flash",
+              "rest",
+              "substitute",
+              "snore",
+              "curse",
+              "protect",
+              "sludge-bomb",
+              "mud-slap",
+              "outrage",
+              "giga-drain",
+              "endure",
+              "charm",
+              "false-swipe",
+              "swagger",
+              "fury-cutter",
+              "attract",
+              "sleep-talk",
+              "return",
+              "frustration",
+              "safeguard",
+              "sweet-scent",
+              "synthesis",
+              "hidden-power",
+              "sunny-day",
+              "rock-smash",
+              "facade",
+              "nature-power",
+              "helping-hand",
+              "ingrain",
+              "knock-off",
+              "secret-power",
+              "weather-ball",
+              "bullet-seed",
+              "magical-leaf",
+              "natural-gift",
+              "worry-seed",
+              "seed-bomb",
+              "energy-ball",
+              "leaf-storm",
+              "power-whip",
+              "captivate",
+              "grass-knot",
+              "venoshock",
+              "acid-spray",
+              "round",
+              "echoed-voice",
+              "grass-pledge",
+              "work-up",
+              "grassy-terrain",
+              "confide",
+              "grassy-glide",
+              "tera-blast",
+              "trailblaze"
+            ],
+            "abilities": [
+              "overgrow",
+              "chlorophyll"
+            ],
+            "evolution": {
+              "from": "bulbasaur",
+              "to": [
+                "ivysaur"
+              ]
+            },
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+          },
+          {
+            "number": 3,
+            "name": "Venusaur",
+            "generation": "Generation I",
+            "height": 20,
+            "weight": 1000,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "stats": [
+              {
+                "name": "hp",
+                "value": 80
+              },
+              {
+                "name": "attack",
+                "value": 82
+              },
+              {
+                "name": "defense",
+                "value": 83
+              },
+              {
+                "name": "special-attack",
+                "value": 100
+              },
+              {
+                "name": "special-defense",
+                "value": 100
+              },
+              {
+                "name": "speed",
+                "value": 80
+              }
+            ],
+            "moves": [
+              "swords-dance",
+              "cut",
+              "bind",
+              "vine-whip",
+              "headbutt",
+              "tackle",
+              "body-slam",
+              "take-down",
+              "double-edge",
+              "growl",
+              "roar",
+              "hyper-beam",
+              "strength",
+              "mega-drain",
+              "leech-seed",
+              "growth",
+              "razor-leaf",
+              "solar-beam",
+              "poison-powder",
+              "sleep-powder",
+              "petal-dance",
+              "string-shot",
+              "earthquake",
+              "toxic",
+              "rage",
+              "mimic",
+              "double-team",
+              "defense-curl",
+              "light-screen",
+              "reflect",
+              "bide",
+              "amnesia",
+              "flash",
+              "rest",
+              "substitute",
+              "snore",
+              "curse",
+              "protect",
+              "scary-face",
+              "sludge-bomb",
+              "mud-slap",
+              "outrage",
+              "giga-drain",
+              "endure",
+              "charm",
+              "false-swipe",
+              "swagger",
+              "fury-cutter",
+              "attract",
+              "sleep-talk",
+              "return",
+              "frustration",
+              "safeguard",
+              "sweet-scent",
+              "synthesis",
+              "hidden-power",
+              "sunny-day",
+              "rock-smash",
+              "facade",
+              "nature-power",
+              "helping-hand",
+              "ingrain",
+              "knock-off",
+              "secret-power",
+              "weather-ball",
+              "bullet-seed",
+              "block",
+              "frenzy-plant",
+              "magical-leaf",
+              "natural-gift",
+              "worry-seed",
+              "poison-jab",
+              "seed-bomb",
+              "energy-ball",
+              "earth-power",
+              "giga-impact",
+              "rock-climb",
+              "leaf-storm",
+              "power-whip",
+              "captivate",
+              "grass-knot",
+              "venoshock",
+              "acid-spray",
+              "round",
+              "echoed-voice",
+              "grass-pledge",
+              "bulldoze",
+              "work-up",
+              "petal-blizzard",
+              "grassy-terrain",
+              "confide",
+              "stomping-tantrum",
+              "grassy-glide",
+              "terrain-pulse",
+              "tera-blast",
+              "trailblaze"
+            ],
+            "abilities": [
+              "overgrow",
+              "chlorophyll"
+            ],
+            "evolution": {
+              "from": "ivysaur",
+              "to": [
+                "ivysaur"
+              ]
+            },
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+          }
+      ],
+    })
+  );
+  
+  export const mockData = [
+    {
+        "number": 1,
+        "name": "Bulbasaur",
+        "generation": "Generation I",
+        "height": 7,
+        "weight": 69,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "stats": [
+          {
+            "name": "hp",
+            "value": 45
+          },
+          {
+            "name": "attack",
+            "value": 49
+          },
+          {
+            "name": "defense",
+            "value": 49
+          },
+          {
+            "name": "special-attack",
+            "value": 65
+          },
+          {
+            "name": "special-defense",
+            "value": 65
+          },
+          {
+            "name": "speed",
+            "value": 45
+          }
+        ],
+        "moves": [
+          "razor-wind",
+          "swords-dance",
+          "cut",
+          "bind",
+          "vine-whip",
+          "headbutt",
+          "tackle",
+          "body-slam",
+          "take-down",
+          "double-edge",
+          "growl",
+          "strength",
+          "mega-drain",
+          "leech-seed",
+          "growth",
+          "razor-leaf",
+          "solar-beam",
+          "poison-powder",
+          "sleep-powder",
+          "petal-dance",
+          "string-shot",
+          "toxic",
+          "rage",
+          "mimic",
+          "double-team",
+          "defense-curl",
+          "light-screen",
+          "reflect",
+          "bide",
+          "sludge",
+          "skull-bash",
+          "amnesia",
+          "flash",
+          "rest",
+          "substitute",
+          "snore",
+          "curse",
+          "protect",
+          "sludge-bomb",
+          "mud-slap",
+          "outrage",
+          "giga-drain",
+          "endure",
+          "charm",
+          "false-swipe",
+          "swagger",
+          "fury-cutter",
+          "attract",
+          "sleep-talk",
+          "return",
+          "frustration",
+          "safeguard",
+          "sweet-scent",
+          "synthesis",
+          "hidden-power",
+          "sunny-day",
+          "rock-smash",
+          "facade",
+          "nature-power",
+          "helping-hand",
+          "ingrain",
+          "knock-off",
+          "secret-power",
+          "weather-ball",
+          "grass-whistle",
+          "bullet-seed",
+          "magical-leaf",
+          "natural-gift",
+          "worry-seed",
+          "seed-bomb",
+          "energy-ball",
+          "leaf-storm",
+          "power-whip",
+          "captivate",
+          "grass-knot",
+          "venoshock",
+          "acid-spray",
+          "round",
+          "echoed-voice",
+          "grass-pledge",
+          "work-up",
+          "grassy-terrain",
+          "confide",
+          "grassy-glide",
+          "tera-blast",
+          "trailblaze"
+        ],
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "evolution": {
+          "from": null,
+          "to": [
+            "ivysaur"
+          ]
+        },
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+      },
+      {
+        "number": 2,
+        "name": "Ivysaur",
+        "generation": "Generation I",
+        "height": 10,
+        "weight": 130,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "stats": [
+          {
+            "name": "hp",
+            "value": 60
+          },
+          {
+            "name": "attack",
+            "value": 62
+          },
+          {
+            "name": "defense",
+            "value": 63
+          },
+          {
+            "name": "special-attack",
+            "value": 80
+          },
+          {
+            "name": "special-defense",
+            "value": 80
+          },
+          {
+            "name": "speed",
+            "value": 60
+          }
+        ],
+        "moves": [
+          "swords-dance",
+          "cut",
+          "bind",
+          "vine-whip",
+          "headbutt",
+          "tackle",
+          "body-slam",
+          "take-down",
+          "double-edge",
+          "growl",
+          "roar",
+          "strength",
+          "mega-drain",
+          "leech-seed",
+          "growth",
+          "razor-leaf",
+          "solar-beam",
+          "poison-powder",
+          "sleep-powder",
+          "petal-dance",
+          "string-shot",
+          "toxic",
+          "rage",
+          "mimic",
+          "double-team",
+          "defense-curl",
+          "light-screen",
+          "reflect",
+          "bide",
+          "amnesia",
+          "flash",
+          "rest",
+          "substitute",
+          "snore",
+          "curse",
+          "protect",
+          "sludge-bomb",
+          "mud-slap",
+          "outrage",
+          "giga-drain",
+          "endure",
+          "charm",
+          "false-swipe",
+          "swagger",
+          "fury-cutter",
+          "attract",
+          "sleep-talk",
+          "return",
+          "frustration",
+          "safeguard",
+          "sweet-scent",
+          "synthesis",
+          "hidden-power",
+          "sunny-day",
+          "rock-smash",
+          "facade",
+          "nature-power",
+          "helping-hand",
+          "ingrain",
+          "knock-off",
+          "secret-power",
+          "weather-ball",
+          "bullet-seed",
+          "magical-leaf",
+          "natural-gift",
+          "worry-seed",
+          "seed-bomb",
+          "energy-ball",
+          "leaf-storm",
+          "power-whip",
+          "captivate",
+          "grass-knot",
+          "venoshock",
+          "acid-spray",
+          "round",
+          "echoed-voice",
+          "grass-pledge",
+          "work-up",
+          "grassy-terrain",
+          "confide",
+          "grassy-glide",
+          "tera-blast",
+          "trailblaze"
+        ],
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "evolution": {
+          "from": "bulbasaur",
+          "to": [
+            "ivysaur"
+          ]
+        },
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+      },
+      {
+        "number": 3,
+        "name": "Venusaur",
+        "generation": "Generation I",
+        "height": 20,
+        "weight": 1000,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "stats": [
+          {
+            "name": "hp",
+            "value": 80
+          },
+          {
+            "name": "attack",
+            "value": 82
+          },
+          {
+            "name": "defense",
+            "value": 83
+          },
+          {
+            "name": "special-attack",
+            "value": 100
+          },
+          {
+            "name": "special-defense",
+            "value": 100
+          },
+          {
+            "name": "speed",
+            "value": 80
+          }
+        ],
+        "moves": [
+          "swords-dance",
+          "cut",
+          "bind",
+          "vine-whip",
+          "headbutt",
+          "tackle",
+          "body-slam",
+          "take-down",
+          "double-edge",
+          "growl",
+          "roar",
+          "hyper-beam",
+          "strength",
+          "mega-drain",
+          "leech-seed",
+          "growth",
+          "razor-leaf",
+          "solar-beam",
+          "poison-powder",
+          "sleep-powder",
+          "petal-dance",
+          "string-shot",
+          "earthquake",
+          "toxic",
+          "rage",
+          "mimic",
+          "double-team",
+          "defense-curl",
+          "light-screen",
+          "reflect",
+          "bide",
+          "amnesia",
+          "flash",
+          "rest",
+          "substitute",
+          "snore",
+          "curse",
+          "protect",
+          "scary-face",
+          "sludge-bomb",
+          "mud-slap",
+          "outrage",
+          "giga-drain",
+          "endure",
+          "charm",
+          "false-swipe",
+          "swagger",
+          "fury-cutter",
+          "attract",
+          "sleep-talk",
+          "return",
+          "frustration",
+          "safeguard",
+          "sweet-scent",
+          "synthesis",
+          "hidden-power",
+          "sunny-day",
+          "rock-smash",
+          "facade",
+          "nature-power",
+          "helping-hand",
+          "ingrain",
+          "knock-off",
+          "secret-power",
+          "weather-ball",
+          "bullet-seed",
+          "block",
+          "frenzy-plant",
+          "magical-leaf",
+          "natural-gift",
+          "worry-seed",
+          "poison-jab",
+          "seed-bomb",
+          "energy-ball",
+          "earth-power",
+          "giga-impact",
+          "rock-climb",
+          "leaf-storm",
+          "power-whip",
+          "captivate",
+          "grass-knot",
+          "venoshock",
+          "acid-spray",
+          "round",
+          "echoed-voice",
+          "grass-pledge",
+          "bulldoze",
+          "work-up",
+          "petal-blizzard",
+          "grassy-terrain",
+          "confide",
+          "stomping-tantrum",
+          "grassy-glide",
+          "terrain-pulse",
+          "tera-blast",
+          "trailblaze"
+        ],
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "evolution": {
+          "from": "ivysaur",
+          "to": [
+            "ivysaur"
+          ]
+        },
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+      }
+  ];

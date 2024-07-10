@@ -14,6 +14,13 @@ const Dashboard = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 25;
 
+    const [filterNumber, setFilterNumber] = useState('');
+    const [filterName, setFilterName] = useState('');
+    const [filterType, setFilterType] = useState('');
+    const [filterGeneration, setFilterGeneration] = useState('');
+    const [filterMoves, setFilterMoves] = useState('');
+
+
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/pokemon')
@@ -46,7 +53,30 @@ const Dashboard = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
-    const paginatedPokemonList = pokemonList.slice(startIndex, endIndex);
+    let filteredPokemonList = [...pokemonList];
+
+    if (filterNumber) {
+        filteredPokemonList = filteredPokemonList.filter(pokemon => String(pokemon.number) === filterNumber);
+    }
+
+    if (filterName) {
+        filteredPokemonList = filteredPokemonList.filter(pokemon => pokemon.name.toLowerCase().includes(filterName.toLowerCase()));
+    }
+
+    if (filterType && filterType !== '') {
+        filteredPokemonList = filteredPokemonList.filter(pokemon => pokemon.types.includes(filterType));
+    }
+
+    if (filterGeneration && filterGeneration !== '') {
+        filteredPokemonList = filteredPokemonList.filter(pokemon => pokemon.generation === filterGeneration);
+    }
+
+    if (filterMoves) {
+        filteredPokemonList = filteredPokemonList.filter(pokemon => pokemon.moves.includes(filterMoves));
+    }
+
+
+    const paginatedPokemonList = filteredPokemonList.slice(startIndex, endIndex);
 
     return (
         <div>
@@ -78,6 +108,41 @@ const Dashboard = () => {
             </div>
             <div className='table'>
                 <h2>Pokemon List</h2>
+                <select value={filterType} onChange={(e) => setFilterType(e.target.value)}>
+                    <option value="">All Types</option>
+                    {Object.keys(summary.types).map((type) => (
+                        <option key={type} value={type}>{type}</option>
+                    ))}
+                </select>
+
+                <select value={filterGeneration} onChange={(e) => setFilterGeneration(e.target.value)}>
+                    <option value="">All Generations</option>
+                    {Object.keys(summary.generations).map((gen) => (
+                        <option key={gen} value={gen}>{gen}</option>
+                    ))}
+                </select>
+
+                <input
+                    type="text"
+                    placeholder="Search by Number"
+                    value={filterNumber}
+                    onChange={(e) => setFilterNumber(e.target.value)}
+                />
+
+                <input
+                    type="text"
+                    placeholder="Search by Name"
+                    value={filterName}
+                    onChange={(e) => setFilterName(e.target.value)}
+                />
+
+                <input
+                    type="text"
+                    placeholder="Search by Moves"
+                    value={filterMoves}
+                    onChange={(e) => setFilterMoves(e.target.value)}
+                />
+
                 <table>
                     <thead>
                         <tr>
@@ -108,8 +173,8 @@ const Dashboard = () => {
                 </table>
                 <div className="pagination">
                     <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
-                    Page {currentPage} of {Math.ceil(summary.total / itemsPerPage)}
-                    <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === Math.ceil(summary.total / itemsPerPage)}>Next</button>
+                    Page {currentPage} of {Math.ceil(filteredPokemonList.length / itemsPerPage)}
+                    <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === Math.ceil(filteredPokemonList.length / itemsPerPage)}>Next</button>
                 </div>
             </div>
         </div>

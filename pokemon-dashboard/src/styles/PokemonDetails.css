@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+}
+
+.stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.container{
+    background-color: aqua;
+    height: 100vh;
+}

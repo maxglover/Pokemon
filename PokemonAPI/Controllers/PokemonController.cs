@@ -24,22 +24,7 @@ namespace PokemonAPI.Controllers
             return _pokemonService.GetAllPokemon();
         }
 
-        [HttpGet]
-        public ActionResult<List<Pokemon>> GetPokemonPage(int page = 1, int pageSize = 25)
-        {
-            var pokemonList = _pokemonService.GetAllPokemon();
 
-            // Calculate total number of pages
-            int totalItems = pokemonList.Count;
-            int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
-
-            // Pagination logic
-            var pokemonPage = pokemonList.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-
-            // Return paginated result along with total pages information
-            return Ok(new { PokemonPage = pokemonPage, TotalPages = totalPages });
-        }
-        
         [HttpGet("{name}")]
         public ActionResult<Pokemon> GetPokemonByName(string name)
         {
