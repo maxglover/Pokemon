@@ -1,0 +1,21 @@
+.comp{
+    display: flex;
+    flex-direction: row;
+    gap:20%;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+.stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.higher-stat {
+    color: green;
+}
+
+.lower-stat {
+    color: red;
+}

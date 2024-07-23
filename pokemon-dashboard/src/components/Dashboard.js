@@ -83,9 +83,12 @@ const Dashboard = () => {
             <div className='summary'>
                 <h2>Meet Our Pokemon!</h2>
 
-                <div className='col'>
-                    <p>Total Pokemon: {summary.total}</p>
-                </div>
+                <div className='rowII'>
+
+                    <div>
+                    <div className='col'>
+                        <p>Total Pokemon: {summary.total}</p>
+                    </div>
 
                     <div className='row'>
                         <div>
@@ -105,6 +108,16 @@ const Dashboard = () => {
                             </ul>
                         </div>
                     </div>
+                    </div>
+
+                    <div className='compare'>
+                        <Link to={`/compare`}>
+                            <img src='/fight.jpg' alt='pokemon fight'></img>
+                        </Link>
+                        <h3>Compare Pokemon</h3>
+                    </div>
+
+                </div>
             </div>
             <div className='table'>
                 <h2>Pokemon List</h2>

@@ -49,3 +49,23 @@ table{
     margin: 0;
     padding: 0; 
 }
+.compare img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.compare{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.rowII{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;  
+    gap: 30%; 
+}
